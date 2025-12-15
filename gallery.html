@@ -1,38 +1,158 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Моя Галерея</title>
-    <link rel="stylesheet" href="static/style.css">
-</head>
+<meta charset="UTF-8">
+<title>Моя Галерея</title>
 <style>
-        body {
-            margin:0;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            min-height: 100vh;
-            color: #333;
-        }
-        body {
-            background-color: #8df3d6;
-            color: #010110;
-        }
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #8df3d6;
+    color: #010110;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 90%;
+    margin: 20px auto;
+    border: 2px solid #333;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 300px;
+}
+
+.top-left {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: start;
+}
+
+.top-right {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
+}
+
+.bottom-left {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: end;
+    justify-self: start;
+}
+
+.bottom-right {
+    grid-column: 3;
+    grid-row: 3;
+    align-self: end;
+    justify-self: end;
+}
+
+.center {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    font-size: 24px;
+    font-weight: bold;
+}
 </style>
-<body> 
-    <nav class ="navbar navbar-expand-lg navbar-light bg-light rounded">
-        <a href="skills.html">Навыки</a>
-        <a href="about.html">Обо мне </a>
-        <a href="gallery.html">Галерея</a>
-    </nav>
-</body>    
+</head>
 <body>
-    <h1>Моя Фото Галерея</h1>
-    <div class="gallery">
-        <img src="icons/cmona.png" alt="чмоня">
-        <img src="icons/makswell.png" alt="максвелл">
-        <img src="icons/image.jpg" alt="pushin">
-        <img src="icons/1.png" >
-        <img src="icons/2.png" >
-        <img src="icons/3.png" >
+<nav>
+    <a href="skills.html">Навыки</a>
+    <a href="about.html">Обо мне</a>
+    <a href="gallery.html">Галерея</a>
+</nav>
+
+<h1>Моя Галерея</h1>
+<h2>Лучшие мемные коты</h2>
+
+<div class="gallery">
+    <img src="icons/cmona.png" alt="чмоня">
+    <img src="icons/makswell.png" alt="максвелл">
+    <img src="icons/image.jpg" alt="pushin">
+    <img src="icons/1.png" alt="изображение 1">
+    <img src="icons/2.png" alt="изображение 2">
+    <img src="icons/3.png" alt="изображение 3">
+</div>
+
+<div class="container">
+    <div class="top-left" style="
+    justify-content: flex-start; 
+    display: flex; 
+    align-items: center;
+    padding: 20px;">
+        Чмоня — интернет-мем с домашней кошкой Вирго, ставшей популярной в интернете.
     </div>
-</body>
+    <div class="top-right" style="
+    justify-content: flex-end;
+    display: flex; 
+    align-items: center; 
+    padding: 20px;">
+        Максвелл — кот, который стал интернет-мемом в 2022 году, известен своим фото в Instagram.
+    </div>
+    <div class="bottom-left" 
+    style="
+    justify-content: flex-start;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;">
+        Пушин — популярный мемный кот, который быстро набрал популярность в соцсетях.
+    </div>
+    <div class="bottom-right" 
+    style= "
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;">
+        Meowl — существо с кошачьей головой и телом совы, популярное в TikTok.
+    </div>
+</div>
 </html>
